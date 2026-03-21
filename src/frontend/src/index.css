@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Primary Blue #1E73BE → oklch(0.52 0.155 242) */
+    --primary: 0.52 0.155 242;
+    --primary-foreground: 1 0 0;
+
+    /* Accent Orange #F28C28 → oklch(0.72 0.17 57) */
+    --accent: 0.72 0.17 57;
+    --accent-foreground: 1 0 0;
+
+    /* Backgrounds */
+    --background: 0.97 0.005 240;
+    --foreground: 0.22 0.01 250;
+
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.01 250;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.01 250;
+
+    --secondary: 0.94 0.01 240;
+    --secondary-foreground: 0.52 0.155 242;
+
+    --muted: 0.94 0.008 240;
+    --muted-foreground: 0.52 0.01 250;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.9 0.01 240;
+    --input: 0.9 0.01 240;
+    --ring: 0.52 0.155 242;
+
+    /* Status colors */
+    --status-pending: 0.82 0.18 85;
+    --status-accepted: 0.52 0.155 242;
+    --status-inprogress: 0.72 0.17 57;
+    --status-completed: 0.64 0.17 150;
+    --status-cancelled: 0.56 0.01 250;
+
+    --chart-1: 0.52 0.155 242;
+    --chart-2: 0.72 0.17 57;
+    --chart-3: 0.64 0.17 150;
+    --chart-4: 0.82 0.18 85;
+    --chart-5: 0.577 0.245 27.325;
+
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.22 0.01 250;
+    --sidebar-primary: 0.52 0.155 242;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.01 240;
+    --sidebar-accent-foreground: 0.22 0.01 250;
+    --sidebar-border: 0.9 0.01 240;
+    --sidebar-ring: 0.52 0.155 242;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  }
+}
